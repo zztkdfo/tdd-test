@@ -1,0 +1,14 @@
+{
+  "editor.formatOnSave": true,
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "files.associations": {
+    "*.json": "jsonc"
+  },
+  "files.eol": "\n",
+  "search.followSymlinks": false
+}

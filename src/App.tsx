@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { ReactElement } from 'react'
+import './App.css'
+import GlobalStyle from './GlobalStyle'
+import { TodoTemplate } from './components/TodoTemplate'
+import { TodoHeader } from './components/TodoHeader'
+import { TodoListContainer } from './container/TodoListContainer'
+import { TodoInputContainer } from './container/TodoInputContainer'
 
-function App() {
+function App(): ReactElement {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <GlobalStyle />
+      <TodoTemplate>
+        <TodoHeader title={'Todo 리스트 (TDD)'} />
+        <TodoInputContainer />
+        <TodoListContainer />
+      </TodoTemplate>
+    </>
+  )
 }
 
-export default App;
+export default App
