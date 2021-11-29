@@ -13,7 +13,7 @@
 - 디자인패턴(Container, Presenter 패턴)
 - css (styled components, https://styled-components.com/)
 - Function Component
-- UI Library(, https://ant.design/)
+- UI Library(antd, https://ant.design/)
 
 # 실행 방법
 - git clone https://github.com/zztkdfo/tdd-test.git
