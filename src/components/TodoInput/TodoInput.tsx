@@ -22,7 +22,7 @@ export default function TodoInput({
     <div>
       <StyledInput
         placeholder="할 일을 입력하세요."
-        value={title}
+        defaultValue={title}
         onChange={handleInputTitle}
       />
 

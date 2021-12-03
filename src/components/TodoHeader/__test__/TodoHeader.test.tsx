@@ -3,10 +3,13 @@ import { render } from '@testing-library/react'
 
 import { TodoHeader } from './../../TodoHeader'
 
-describe('TodoHeader', () => {
-  it('render TodoHeader', () => {
-    const { container } = render(<TodoHeader title={'Todo 리스트 (TDD)'} />)
+describe('render TodoHeader', () => {
+  test('render title', () => {
+    // Given
+    const { getByText } = render(<TodoHeader title={'Todo 리스트 (TDD)'} />)
+    // When
 
-    expect(container).toHaveTextContent('Todo 리스트 (TDD)')
+    // Then
+    expect(getByText('Todo 리스트 (TDD)')).toBeInTheDocument()
   })
 })
