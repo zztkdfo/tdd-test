@@ -20,7 +20,13 @@ export default function TodoList({ tasks }: TodoListProps): ReactElement {
   return (
     <StyledListWrapper>
       {tasks && tasks.length > 0 ? (
-        tasks.map((task) => <TodoItemContainer key={task.id} task={task} />)
+        <ul aria-label="tasks">
+          {tasks.map((task) => (
+            <li key={task.id}>
+              <TodoItemContainer task={task} />
+            </li>
+          ))}
+        </ul>
       ) : (
         <Empty title={'목록이 존재하지 않습니다.'} />
       )}

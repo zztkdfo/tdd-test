@@ -1,6 +1,7 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import { TodoInput } from '../../TodoInput'
+import userEvent from '@testing-library/user-event'
 
 const setup = () => {
   const utils = render(
@@ -33,6 +34,17 @@ describe('TodoInput', () => {
 
     // Then
     expect(button).toBeInTheDocument()
+  })
+
+  test('Button click', () => {
+    // Given
+    const { button } = setup()
+
+    // When
+    userEvent.click(button)
+
+    // Then
+    expect(jest.fn()).toBeCalledTimes(1)
   })
 
   test('Input render Text', () => {
